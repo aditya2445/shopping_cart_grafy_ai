@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import QuantityControl from "./QuantityControl";
+import FALLBACK_IMAGE from "../assets/cartImage.jpg"
 
 export default function ProductCard({ product }) {
   const { cart, addToCart, updateQuantity } = useContext(CartContext);
@@ -9,7 +10,15 @@ export default function ProductCard({ product }) {
 
   return (
     <div style={cardStyle}>
-      <img src={product.image} alt={product.name} style={imgStyle} />
+      <img 
+      src={product.image}
+      alt={product.name} 
+      style={imgStyle} 
+      onError={(e) => {
+        e.target.onError = null;
+        e.target.src = FALLBACK_IMAGE;
+      }}
+      />
       <h4>{product.name}</h4>
       <p>₹{product.price}</p>
 
