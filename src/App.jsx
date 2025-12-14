@@ -1,12 +1,14 @@
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import { useState } from "react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Box } from "@mui/material"
 
 export default function App() {
   const [isCartActive, setIsCartActive] = useState(false);
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div>
       <header
         style={{
           position: "sticky",
@@ -24,13 +26,15 @@ export default function App() {
           zIndex: 1000,
         }}
       >
-        <h1>Shopping Cart</h1>
-        <div
+        <h1 style={{fontFamily: "sans-serif"}} >Shopping Cart</h1>
+        <Box
           style={{ fontSize: "30px", cursor: "pointer" }}
           onClick={() => setIsCartActive(true)}
         >
-          🛒
-        </div>
+          <ShoppingCartIcon 
+            fontSize="large"
+          />
+        </Box>
       </header>
       <div style={{ width: "85vw", margin: "0 auto" }}>
         <ProductList />
@@ -44,7 +48,7 @@ export default function App() {
               inset: 0,
               backgroundColor: "rgba(0,0,0,0.3)",
               backdropFilter: "blur(4px)",
-              zIndex: 2000,
+              zIndex: 2,
             }}
           />
           <div

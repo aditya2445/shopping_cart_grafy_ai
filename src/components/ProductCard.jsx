@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import QuantityControl from "./QuantityControl";
 import FALLBACK_IMAGE from "../assets/cartImage.jpg"
+import { Button, TextField } from "@mui/material";
 
 export default function ProductCard({ product }) {
   const { cart, addToCart, updateQuantity } = useContext(CartContext);
@@ -19,25 +20,31 @@ export default function ProductCard({ product }) {
         e.target.src = FALLBACK_IMAGE;
       }}
       />
-      <h4>{product.name}</h4>
-      <p>₹{product.price}</p>
-
-      {!cartItem ? (
-        <button onClick={() => addToCart(product)}>
-          Add to Cart
-        </button>
-      ) : (
-        <QuantityControl
-          maxQuantity={cartItem.stock}
-          quantity={cartItem.quantity}
-          onIncrease={() =>
-            updateQuantity(product.id, cartItem.quantity + 1)
-          }
-          onDecrease={() =>
-            updateQuantity(product.id, cartItem.quantity - 1)
-          }
-        />
-      )}
+      <h4
+      style={{fontFamily:"sans-serif", fontSize: "18px"}}
+      >{product.name}</h4>
+      <div style={{display: "flex", justifyContent:"space-around", alignItems: "center"}}>
+        <p
+        style={{fontFamily: "sans-serif", fontWeight:"bold"}}
+        >₹{product.price}</p>
+        
+        {!cartItem ? (
+          <Button 
+          onClick={() => addToCart(product)}
+          variant="contained">Add to cart</Button>
+        ) : (
+          <QuantityControl
+            maxQuantity={cartItem.stock}
+            quantity={cartItem.quantity}
+            onIncrease={() =>
+              updateQuantity(product.id, cartItem.quantity + 1)
+            }
+            onDecrease={() =>
+              updateQuantity(product.id, cartItem.quantity - 1)
+            }
+          />
+        )}
+      </div>
     </div>
   );
 }
@@ -53,4 +60,5 @@ const imgStyle = {
   width: "100%",
   height: "150px",
   objectFit: "cover",
+  borderRadius: "10px",
 };

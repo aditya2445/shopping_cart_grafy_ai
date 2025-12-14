@@ -19,7 +19,17 @@ const products = [
   { id: 17, name: "Monitor 24 inch", price: 12499, image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", stock: 4 },
   { id: 18, name: "WiFi Router", price: 2999, image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", stock: 6 },
   { id: 19, name: "Graphic Tablet", price: 4599, image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6", stock: 3 },
-  { id: 20, name: "Desk Lamp", price: 1199, image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4", stock: 7 }
+  { id: 20, name: "Desk Lamp", price: 1199, image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4", stock: 7 },
+  { id: 21, name: "Portable SSD", price: 6499, image: "https://images.unsplash.com/photo-1580910051074-7c4e2a8a8c41", stock: 5 },
+  { id: 22, name: "Noise Cancelling Headphones", price: 6999, image: "https://images.unsplash.com/photo-1583394838336-acd977736f90", stock: 4 },
+  { id: 23, name: "Keyboard & Mouse Combo", price: 2199, image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", stock: 6 },
+  { id: 24, name: "USB Hub", price: 899, image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6", stock: 12 },
+  { id: 25, name: "Phone Tripod", price: 1099, image: "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2", stock: 9 },
+  { id: 26, name: "VR Headset", price: 8999, image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620", stock: 2 },
+  { id: 27, name: "Smart LED Bulb", price: 699, image: "https://images.unsplash.com/photo-1602526219046-5e8e0f3f8a41", stock: 14 },
+  { id: 28, name: "Wireless Presenter", price: 1299, image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6", stock: 6 },
+  { id: 29, name: "Ethernet Cable", price: 399, image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6", stock: 25 },
+  { id: 30, name: "Laptop Cooling Pad", price: 1699, image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04", stock: 5 }
 ];
 
 export default products;
