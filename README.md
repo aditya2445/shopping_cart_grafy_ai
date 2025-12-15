@@ -3,7 +3,7 @@ A modern shopping cart web application built using **React + Vite** with **Mater
 
 ---
 
-## 🚀 Features
+## Features
 
 - Product listing with images, prices, stock, and categories
 - Add to Cart and quantity update functionality
@@ -15,7 +15,7 @@ A modern shopping cart web application built using **React + Vite** with **Mater
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - React (Vite)
 - Material UI
@@ -25,12 +25,14 @@ A modern shopping cart web application built using **React + Vite** with **Mater
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-src/
+```
+src/ 
 │── components/
 │ ├── ProductList.jsx
 │ ├── ProductCard.jsx
+| ├── CartItem.jsx
 │ ├── Cart.jsx
 │ ├── QuantityControl.jsx
 │
@@ -45,20 +47,18 @@ src/
 │
 │── App.jsx
 │── main.jsx
+```
 
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
+
 1. Clone the repository
-```bash
-git clone <repo-link>.
-
+    git clone <repo-link>.
 2. Install dependencies
-npm install
-
+    npm install
 3. Start the development server
-npm run dev
-
+   npm run dev
 4. Open browser at:
-http://localhost:5173
+   http://localhost:5173
