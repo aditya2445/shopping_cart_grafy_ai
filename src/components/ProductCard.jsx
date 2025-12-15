@@ -12,6 +12,7 @@ export default function ProductCard({ product }) {
   return (
     <div style={cardStyle}>
       <img 
+      loading="lazy"
       src={product.image}
       alt={product.name} 
       style={imgStyle} 

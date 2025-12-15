@@ -16,10 +16,6 @@ export default function ProductList() {
   // console.log(filteredProducts)
   return (
     <>
-    {
-      filteredProducts.length === 0 &&
-      <Typography>No Products Found</Typography>
-    }
     <Box
       sx={{display: "flex",
         justifyContent: "space-between",
@@ -76,6 +72,10 @@ export default function ProductList() {
         </Box>
       </Box>
       )
+    }
+    {
+      filteredProducts.length === 0 &&
+      <Typography>No Products Found</Typography>
     }
       <Box
         sx={{
